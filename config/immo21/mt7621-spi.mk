@@ -1245,7 +1245,7 @@ TARGET_DEVICES += planex_vr500
 
 define Device/raisecom_msg1500-x-00
   $(Device/dsa-migration)
-  IMAGE_SIZE := 32448k
+  IMAGE_SIZE := 15744k
   DEVICE_VENDOR := RAISECOM
   DEVICE_MODEL := MSG1500
   DEVICE_VARIANT := X.00
@@ -1795,7 +1795,7 @@ TARGET_DEVICES += zio_freezio
 
 define Device/zte_e8820s
   $(Device/dsa-migration)
-  IMAGE_SIZE := 32448k
+  IMAGE_SIZE := 15744k
   DEVICE_VENDOR := ZTE
   DEVICE_MODEL := E8820S
   DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport
