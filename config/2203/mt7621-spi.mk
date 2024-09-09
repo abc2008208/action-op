@@ -1566,15 +1566,6 @@ define Device/raisecom_msg1500-x-00
 endef
 TARGET_DEVICES += raisecom_msg1500-x-00
 
-define Device/zte_e8820s
-  $(Device/dsa-migration)
-  IMAGE_SIZE := 15744k
-  DEVICE_VENDOR := ZTE
-  DEVICE_MODEL := E8820S
-  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport
-endef
-TARGET_DEVICES += zte_e8820s
-
 define Device/renkforce_ws-wn530hp3-a
   $(Device/dsa-migration)
   DEVICE_VENDOR := Renkforce
@@ -2274,6 +2265,15 @@ define Device/zio_freezio
 	kmod-usb-ledtrig-usbport
 endef
 TARGET_DEVICES += zio_freezio
+
+define Device/zte_e8820s
+  $(Device/dsa-migration)
+  IMAGE_SIZE := 15744k
+  DEVICE_VENDOR := ZTE
+  DEVICE_MODEL := E8820S
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += zte_e8820s
 
 define Device/zyxel_nr7101
   $(Device/dsa-migration)
