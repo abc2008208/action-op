@@ -81,6 +81,8 @@ jobs:
         cp -f config/immo21/target.mk immortalwrt/include/target.mk
         cp -f config/immo21/mt7621-spi.mk immortalwrt/target/linux/ramips/image/mt7621.mk
         cp -f config/immo21/mt7621_zte_e8820s-spi.dts immortalwrt/target/linux/ramips/dts/mt7621_zte_e8820s.dts
+        cp -f config/immo21/mt7621_raisecom_msg1500-x-00-spi.dts immortalwrt/target/linux/ramips/dts/mt7621_raisecom_msg1500-x-00.dts
+        cp -f config/immo21/platform-spi.sh immortalwrt/target/linux/ramips/mt7621/base-files/lib/upgrade/platform.sh
         cp -f config/immo21/02_network immortalwrt/target/linux/ramips/mt7621/base-files/etc/board.d/02_network
         chmod +x $DIY_P2_SH
         cd immortalwrt
