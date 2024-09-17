@@ -279,6 +279,7 @@ TARGET_DEVICES += raisecom_msg1500-x-00
 define Device/zte_e8820s
   DTS := mt7621_zte_e8820s
   IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  DEVICE_TITLE := zte_e8820s
   DEVICE_VENDOR := ZTE
   DEVICE_MODEL := E8820S
   DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport wpad-basic
