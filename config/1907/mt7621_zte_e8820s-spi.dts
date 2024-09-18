@@ -1,4 +1,4 @@
-/dts-v1/;
+p/dts-v1/;
 
 #include "mt7621.dtsi"
 
@@ -18,7 +18,7 @@
 
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x1c000000>, <0x20000000 0x4000000>;
+		reg = <0x0 0x20000000>;
 	};
 
 	chosen {
