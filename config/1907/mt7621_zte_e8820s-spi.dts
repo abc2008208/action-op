@@ -18,7 +18,7 @@ p/dts-v1/;
 
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x20000000>;
+		reg = <0x0 0x1c000000>, <0x20000000 0x4000000>;
 	};
 
 	chosen {
@@ -124,7 +124,6 @@ p/dts-v1/;
 	wifi@0,0 {
 		reg = <0x0000 0 0 0 0>;
 		mediatek,mtd-eeprom = <&factory 0x8000>;
-		ieee80211-freq-limit = <5000000 6000000>;
 		led {
 			led-sources = <2>;
 			led-active-low;
@@ -134,6 +133,7 @@ p/dts-v1/;
 
 &ethernet {
 	mtd-mac-address = <&factory 0xe000>;
+        mediatek,portmap = "llllw";
 };
 
 &pinctrl {
