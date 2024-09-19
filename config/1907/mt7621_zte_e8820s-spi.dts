@@ -18,7 +18,7 @@
 
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x1c000000>, <0x20000000 0x4000000>;
+		reg = <0x0 0x1c000000>, <0x20000000 0x04000000>;
 	};
 
 	chosen {
@@ -69,7 +69,6 @@
 		compatible = "jedec,spi-nor";
 		reg = <0>;
 		spi-max-frequency = <25000000>;
-		broken-flash-reset;
 		m25p,fast-read;
 
 		partitions {
@@ -112,8 +111,10 @@
 
 &pcie0 {
 	wifi@0,0 {
+		compatible = "mediatek,mt76";
 		reg = <0x0000 0 0 0 0>;
 		mediatek,mtd-eeprom = <&factory 0x0000>;
+		ieee80211-freq-limit = <2400000 2500000>;
 		led {
 			led-active-low;
 		};
@@ -122,8 +123,10 @@
 
 &pcie1 {
 	wifi@0,0 {
+		compatible = "mediatek,mt76";
 		reg = <0x0000 0 0 0 0>;
 		mediatek,mtd-eeprom = <&factory 0x8000>;
+		ieee80211-freq-limit = <5000000 6000000>;
 		led {
 			led-sources = <2>;
 			led-active-low;
