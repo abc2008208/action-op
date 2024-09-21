@@ -17,7 +17,7 @@ index 00eea6f..13756c7 100755
 +    spi_write(flash->spi, flash->command, 1);
 +    
 +    /* Clean up MTD stuff. */
-+    mtd_device_unregister(&flash->mtd);   
++    mtd_device_unregister(&flash->spi_nor.mtd);   
 +}
 +
  static int m25p_cmdsz(struct spi_nor *nor)
