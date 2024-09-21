@@ -1,11 +1,11 @@
 diff --git a/drivers/mtd/devices/m25p80.c b/drivers/mtd/devices/m25p80.c
-index 00eea6f..13756c7 100755
+index 00eea6f..9762521 100755
 --- a/drivers/mtd/devices/m25p80.c
 +++ b/drivers/mtd/devices/m25p80.c
 @@ -56,6 +56,20 @@ static void m25p_addr2cmd(struct spi_nor *nor, unsigned int addr, u8 *cmd)
  	cmd[4] = addr >> (nor->addr_width * 8 - 32);
  }
-
+ 
 +static void m25p_shutdown(struct spi_device *spi)
 +{
 +    struct m25p    *flash = spi_get_drvdata(spi);
@@ -17,7 +17,7 @@ index 00eea6f..13756c7 100755
 +    spi_write(flash->spi, flash->command, 1);
 +    
 +    /* Clean up MTD stuff. */
-+    mtd_device_unregister(&flash->spi_nor.mtd);   
++    mtd_device_unregister(&flash->spi_nor.mtd); 
 +}
 +
  static int m25p_cmdsz(struct spi_nor *nor)
