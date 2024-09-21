@@ -85,6 +85,7 @@ jobs:
         cp -f config/1907/02_network openwrt/target/linux/ramips/base-files/etc/board.d/02_network
         cp -f config/1907/mt7530.c openwrt/target/linux/ramips/files-4.14/drivers/net/ethernet/mediatek/mt7530.c
         cp -f config/1907/mt7621_raisecom_msg1500-x-00.dts openwrt/target/linux/ramips/dts/mt7621_raisecom_msg1500-x-00.dts
+        cp -f config/1907/305-spi-nor-reboot.patch openwrt/target/linux/ramips/patches-4.14/305-spi-nor-reboot.patch
         touch openwrt/target/linux/ramips/Makefile
         chmod +x $DIY_P2_SH
         cd openwrt
